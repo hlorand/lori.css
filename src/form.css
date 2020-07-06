@@ -1,0 +1,38 @@
+/* ---------------- FORM ---------------- */
+
+textarea, input:not([type='checkbox']), select {
+	border: 2px solid lightgray;
+	font-size: 1em;
+	padding: 5px;
+	display: block;
+	min-width: 300px;
+	margin-bottom: 5px;
+}
+textarea:focus, input:focus, select:focus {
+	border: 2px solid black;
+	border-radius: 0;
+}
+input[disabled]{
+	background-color: lightgray;
+}
+input[type=checkbox]{
+	display: inline-block;
+}
+label{
+	display: block;
+	margin: 5px 0px !important;
+}
+
+/* ---------------- BUTTON ---------------- */
+button, input[type=button], input[type=submit]{
+	border: 0;
+	font-size: 1em;
+	cursor: pointer;
+	padding: 10px;
+}
+button.large{ padding: 20px 30px; font-size: 1.3em; }
+button.small{ padding: 5px; font-size: 0.8em; }
+button:hover{
+	filter: brightness(110%);
+}
+

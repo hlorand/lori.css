@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lori.css</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="./dist/lori.min.css">
+	<style>
+		/* Additional styles */
+		code{
+			white-space: pre-line;
+		}
+		code:first-line { font-size:0; }
+		code b{
+			background-color: #ffeccf !important;
+		}
+	</style>
+</head>
+<body>
+	<div style="position: fixed; top: 0; right: 0; z-index: 10;">
+		<a href="https://github.com/hlorand/lori.css"><img width="149" height="149" src="https://github.blog/wp-content/uploads/2008/12/forkme_right_orange_ff7600.png?resize=149%2C149" alt="Fork me on GitHub"></a>
+	</div>
+
+	<div class="row">
+		<div class="c-12 center t-white" style="background: linear-gradient(90deg, rgba(185,121,20,1) 0%, rgba(158,98,182,1) 100%);">
+			<h1 class="m-4">LORI.CSS</h1>
+			<p class="m-4">A small (<b>2 kb</b> gzipped) but powerful responsive CSS library.</p>
+			<p class="m-3">
+				<a href="dist/lori.min.css" download><button class="large orange m-1 s-2">Download</button></a>
+				<a href="#documentation"><button class="lightgray m-1 s-2">Documentation</button></a><br>
+				<a href="#custombuild"><button class="lightgray m-1 s-2">Create custom build</button></a>
+			</p>
+		</div>
+		
+	</div>
+
+	<div class="row left pl-2 pr-2 pt-2">
+		<div class="c-12 c-l7">
+			<div class="c-6 p-2">
+				<h3 class="mb-1">Insanely tiny</h3>
+				<p>The whole library is only 7 kb! 2 kb gzipped. You can get the size down by creating a <a href="#custombuild">custom build</a> below.</p>
+			</div>
+			<div class="c-6 p-2">
+				<h3 class="mb-1">Responsive</h3>
+				<p>You can quickly design and customize responsive, mobile-first sites with Lori.css. The page you are watching was built with it.</p>
+			</div>
+			<div class="c-12 p-2">
+				<h3 class="mb-1">Getting started</h3>
+				<p>Add the following lines to your <kbd>&lt;head&gt;</kbd> section, and you are ready to go:</p>
+				<code class="p-1 white m-1">
+					&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;<br>
+					&lt;link rel="stylesheet" type="text/css" href="lori.min.css"&gt;
+				</code>
+			</div>
+		</div>
+		<div class="c-s10 o-s1 c-8 o-2 c-l5 p-2">
+			<a href="examples/example1.htm">
+				<div class="video">
+					<video src="examples/example1.mp4" autoplay muted loop></video>
+				</div>
+				<button class="orange center t-white">Open example page</button>
+			</a>
+		</div>
+		
+	</div>
+
+	<hr>
+
+	<div class="row pl-4 pr-4 mt-2">
+		<div class="c-12">
+			<h1 id="documentation" class="center mb-2">Documentation</h1>
+		</div>
+		<div class="c-12">
+			<h2>Grid system</h2>
+		</div>
+		<div class="c-7 c-l6">
+			<p>There are <b>12 columns</b>. Lori.css's grid system uses a series of rows and columns to layout and align content. You can specify the column width in the class name. The example below is an 50%-50% division.</p>
+			<code class="p-1 mt-1 mb-1 white m-1">
+				&lt;div class="row"&gt;<br>
+					&nbsp;&nbsp;&nbsp;&lt;div class="<b>c-6</b>"&gt; This is a column. &lt;/div&gt;<br>
+					&nbsp;&nbsp;&nbsp;&lt;div class="<b>c-6</b>"&gt; This is also a column. &lt;/div&gt;<br>
+				&lt;/div&gt;<br>
+			</code>
+		</div>
+		<div class="c-5 c-l6 pr-4 pl-4">
+			<div class="c-6 mb-1 orange center">c-6</div>
+			<div class="c-6 mb-1 purple center">c-6</div>
+
+			<div class="c-8 mb-1 purple center">c-8</div>
+			<div class="c-4 mb-1 orange center">c-4</div>
+
+			<div class="c-3 mb-1 orange center">c-3</div>
+			<div class="c-3 mb-1 purple center">c-3</div>
+			<div class="c-6 mb-1 orange center">c-6</div>
+
+			<div class="c-2 c-sh mb-1 orange center">c-2</div>
+			<div class="c-2 c-sh mb-1 purple center">c-2</div>
+			<div class="c-2 c-sh mb-1 orange center">c-2</div>
+			<div class="c-2 c-sh mb-1 purple center">c-2</div>
+			<div class="c-2 c-sh mb-1 orange center">c-2</div>
+			<div class="c-2 c-sh mb-1 purple center">c-2</div>
+
+			<p class="c-h c-lh">A normal column collapsing into a row on small screens.</p>
+		</div>
+	</div>
+
+	<div class="row pl-4 pr-4">
+		<div class="c-7 c-l6 mt-2">
+			<p>There are <b>3 breakpoints</b> based on screen size:</p>
+			<table style="width: 100%;">
+				<tr>
+					<th>&nbsp;</th>
+					<th>Size</th>
+					<th>Class</th>
+				</tr>
+				<tr>
+					<td>Small</td>
+					<td><kbd>screen&nbsp;&lt;&nbsp;640px</kbd></td>
+					<td><kbd>c-s*</li></td>
+				</tr>
+				<tr>
+					<td>Normal</td>
+					<td><kbd>640px&nbsp;&lt;=&nbsp;screen&nbsp;&lt;&nbsp;1280px</kbd></td>
+					<td><kbd>c-*</kbd></td>
+				</tr>
+				<tr>
+					<td>Large</td>
+					<td><kbd>1280px&nbsp;&lt;=&nbsp;screen</kbd></td>
+					<td><kbd>c-l*</kbd></td>
+				</tr>
+			</table>
+			<p>Resize your browser window and watch how colums change their sizes.</p>
+		</div>
+		<div class="c-5 c-l6 p-4">
+			<div class="c-s4 c-6 c-l9 orange center" style="height:50px; line-height: 50px;">c-s4 c-6 c-l9</div>
+			<div class="c-s8 c-6 c-l3 mb-1 purple center" style="height:50px; line-height: 50px;">c-s8 c-6 c-l3</div>
+			<code class="p-1 mt-3 mb-1 white" style="margin-top: 30px;">
+				&lt;div class="row"&gt;<br>
+					&nbsp;&nbsp;&nbsp;&lt;div class="<b>c-s4 c-6 c-l9</b>"&gt; <br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;33% on small, 50% on normal, 75% on large. <br>
+					&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+					&nbsp;&nbsp;&nbsp;&lt;div class="<b>c-s8 c-6 c-l3</b>"&gt;<br> 
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;66% on small, 50% on normal, 75% on large.<br>
+					&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+				&lt;/div&gt;<br>
+			</code>
+		</div>
+		<div class="c-7 c-l6">
+			<p>If you want to <b>hide a column</b> on a certain screen size, use one or more of the following classes:</p>
+			<ul>
+				<li>Hide column on small screens: <kbd>c-sh</kbd></li>
+				<li>Hide column on normal screens: <kbd>c-h</kbd></li>
+				<li>Hide column on large screens: <kbd>c-lh</kbd></li>
+			</ul>
+		</div>
+		<div class="c-5 c-l6 p-4">
+			<div class="c-s6 c-sh purple center" style="height:50px; line-height: 50px;">Hidden on small</div>
+			<div class="c-s6 c-h orange center" style="height:50px; line-height: 50px;">Hidden on normal</div>
+			<div class="c-s6 c-lh yellow center" style="height:50px; line-height: 50px;">Hidden on large</div>
+			<code class="c-12 p-1 mb-1 white" style="margin-top: 30px;">
+				&lt;div class="c-6 <b>c-sh</b>"&gt;Hidden on small&lt;/div&gt;<br>
+				&lt;div class="c-6 <b>c-h</b>"&gt;Hidden on normal&lt;/div&gt;<br>
+				&lt;div class="c-6 <b>c-lh</b>"&gt;Hidden on large&lt;/div&gt;<br>
+			</code>
+		</div>
+		<div class="c-7 c-l6">
+			<p>If you want to <b>offset a column</b> on a certain screen size, use one or more of the following classes:</p>
+			<ul>
+				<li>Offset by * columns on small screens: <kbd>o-s*</kbd></li>
+				<li>Offset by * columns on normal screens: <kbd>o-*</kbd></li>
+				<li>Offset by * columns on large screens: <kbd>o-l*</kbd></li>
+			</ul>
+		</div>
+		<div class="c-5 c-l6 p-4">
+			<div class="c-s12 lightgray" style="border: 1px dotted gray;">
+				<div class="c-s8 o-s2 c-8 o-2 c-l8 o-l2 purple center" style="height:50px; line-height: 25px;">8 cols with 2 offset on every screen</div>
+			</div>
+			<code class="c-12 p-1 mt-3 mb-1 white" style="margin-top: 30px;">
+				&lt;div class="c-s8 <b>o-s2</b> c-8 <b>o-2</b> c-l8 <b>o-l2</b>" ><br>
+				&nbsp;&nbsp;&nbsp;8 cols with 2 offset on every screen<br>
+				&lt;/div&gt;
+			</code>
+		</div>
+	</div>
+
+	
+
+	<div class="row pl-4 pr-4">
+		<div class="c-12">
+			<h2>Menus</h2>
+			<p>Menus are just simple lists with the <kbd>.menu</kbd> class and some additional helper "toggle" elements.</p>
+			<ul>
+				<li>You can change the menu toggler text</li>
+				<li>You can set the menu thickness by adding padding (<kbd>p-1</kbd>, <kbd>p-2</kbd>... see below).</li>
+				<li>You can set the menu z-depth by using another shadow class (<kbd>s-1</kbd>, <kbd>s-2</kbd>... see below).</li>
+				<li>You can change the colors.</li>
+			</ul>
+		</div>
+		<div class="c-12 s-3 mt-2">
+			<label class="menutoggle orange" for="menutoggle">☰</label>
+			<input id="menutoggle" type="checkbox">
+			<ul class="menu orange">
+				<a href="#"><li class="orange">MenuItem1</li></a>
+				<a href="#"><li class="orange">MenuItem2</li></a>
+				<a href="#"><li class="orange">MenuItem3</li></a>
+			</ul>
+		</div>
+		<div class="c-12 pr-3">
+			<code class="p-1 mt-1 mb-1 white m-1">
+				&lt;nav class="c-12 s-3"&gt;<br>
+				&nbsp;&nbsp;&nbsp;&lt;label class="menutoggle orange p-1" for="menutoggle"&gt;☰&lt;/label&gt;<br>
+				&nbsp;&nbsp;&nbsp;&lt;input id="menutoggle" type="checkbox"&gt;<br>
+					&nbsp;&nbsp;&nbsp;&lt;ul class="menu orange"&gt;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#"&gt;&lt;li class="orange p-1"&gt; MenuItem &lt;/li&gt;&lt;/a&gt;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#"&gt;&lt;li class="orange p-1"&gt; MenuItem &lt;/li&gt;&lt;/a&gt;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#"&gt;&lt;li class="orange p-1"&gt; MenuItem &lt;/li&gt;&lt;/a&gt;<br>
+					&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+				&lt;/nav&gt;
+			</code>
+			
+		</div>
+	</div>
+
+
+	
+
+	<div class="row pl-4 pr-4 mb-3">
+		<div class="c-s12">
+			<h2>Colors</h2>
+			<p>You can set background and text colors using the following classes:</p>
+		</div>
+		<div class="c-s6 c-12 mt-2">
+			<div class="c-s12 c-2 c-l1 center black">.black</div>
+			<div class="c-s12 c-2 c-l1 center darkgray">.darkgray</div>
+			<div class="c-s12 c-2 c-l1 center brown">.brown</div>
+			<div class="c-s12 c-2 c-l1 center red">.red</div>
+			<div class="c-s12 c-2 c-l1 center orange">.orange</div>
+			<div class="c-s12 c-2 c-l1 center yellow">.yellow</div>
+			<div class="c-s12 c-2 c-l1 center green">.green</div>
+			<div class="c-s12 c-2 c-l1 center blue">.blue</div>
+			<div class="c-s12 c-2 c-l1 center purple">.purple</div>
+			<div class="c-s12 c-2 c-l1 center gray">.gray</div>
+			<div class="c-s12 c-2 c-l1 center lightgray">.lightgray</div>
+			<div class="c-s12 c-2 c-l1 center white">.white</div>
+		</div>
+		<div class="c-s6 c-12 mt-2">
+			<div class="c-s12 c-2 c-l1 center white t-black">.t-black</div>
+			<div class="c-s12 c-2 c-l1 center white t-darkgray">.t-darkgray</div>
+			<div class="c-s12 c-2 c-l1 center white t-brown">.t-brown</div>
+			<div class="c-s12 c-2 c-l1 center white t-red">.t-red</div>
+			<div class="c-s12 c-2 c-l1 center white t-orange">.t-orange</div>
+			<div class="c-s12 c-2 c-l1 center white t-yellow">.t-yellow</div>
+			<div class="c-s12 c-2 c-l1 center white t-green">.t-green</div>
+			<div class="c-s12 c-2 c-l1 center white t-blue">.t-blue</div>
+			<div class="c-s12 c-2 c-l1 center white t-purple">.t-purple</div>
+			<div class="c-s12 c-2 c-l1 center white t-gray">.t-gray</div>
+			<div class="c-s12 c-2 c-l1 center white t-lightgray">.t-lightgray</div>
+			<div class="c-s12 c-2 c-l1 center darkgray t-white">.t-white</div>
+		</div>
+		<div class="c-12 p-1">
+			<h3 class="mb-1">Shadow</h3>
+			<p>You can drop shadow behind elements with the following classes:</p>
+			<ul>
+				<li>1px shadow: <kbd class="s-1">.s-1</kbd></li>
+				<li>2px shadow: <kbd class="s-2">.s-2</kbd></li>
+				<li>3px shadow: <kbd class="s-3">.s-3</kbd></li>
+				<li>4px shadow: <kbd class="s-4">.s-4</kbd></li>
+				<li>5px shadow: <kbd class="s-5">.s-5</kbd></li>
+			</ul>
+		</div>
+	</div>
+
+	
+
+	<div class="row pl-4 pr-4">
+		<div class="c-s12 c-10 c-l8 mt-2">
+			<h2>Margins, paddings</h2>
+			<p>Use the <kbd>m-*</kbd> or the <kbd>p-*</kbd> classes to set the margin or padding width, where <kbd>*</kbd> can be 0,1,2,3,4,5 which means 5px, 10px, 20px, 30px 40px or 50px.</p>
+
+			<p>Examples:</p>
+
+			<ul>
+				<li><kbd>m-1</kbd> = <kbd>margin:  10px;</kbd></li>
+				<li><kbd>p-4</kbd> = <kbd>padding: 40px;</kbd></li>
+			</ul>
+			
+			<p>Use the <kbd>ml-*</kbd>, <kbd>mr-*</kbd>, <kbd>mt-*</kbd>, <kbd>mb-*</kbd> to set the left, right, top or bottom margin.</p>
+
+			<p>Use the <kbd>pl-*</kbd>, <kbd>pr-*</kbd>, <kbd>pt-*</kbd>, <kbd>pb-*</kbd> to set the left, right, top or bottom padding.</p>
+
+			<p>Examples:</p>
+
+			<ul>
+				<li><kbd>mr-2</kbd> = <kbd>margin-right:   20px;</kbd></li>
+				<li><kbd>pb-3</kbd> = <kbd>padding-bottom: 30px;</kbd></li>
+			</ul>
+
+			<p>Real life example:</p>
+
+			<code class="p-1 white m-1">
+			&lt;div class="<b>m-2 pl-1</b>"&gt;<br>
+				&nbsp;&nbsp;&nbsp;&lt;p&gt;This is a div with 20px margin and 10px padding-left.&lt;/p&gt;<br>
+			&lt;/div&gt;<br>
+			</code>
+
+		</div>
+	</div>
+
+	<div class="row pl-4 pr-4">
+		<div class="c-s12">
+			<h2>Images</h2>
+		</div>
+		<div class="c-6 c-l4 p-1">
+
+				<p>Every image is responsive by default, you don't need to add any class to it:</p>
+				<img class="mt-1" src="https://dummyimage.com/1280x720">
+		</div>
+		<div class="c-s6 o-s3 c-4 o-1 c-l2 o-l2 p-1 center">
+			<p>Circle image: <kbd>.circle</kbd></p><br class="h-s">
+			<img class="mt-2 circle" src="https://dummyimage.com/500x500">
+		</div>
+	</div>
+	<div class="row pl-4 pr-4 mb-5">
+		<div class="c-s12">
+			<h2>Helpers</h2>
+		</div>
+		<div class="c-6 c-l5 p-1">
+			<h3 class="mb-1">Align things</h3>
+			<ul>
+				<li>Left align: <kbd>.left</kbd></li>
+				<li>Center align: <kbd>.center</kbd></li>
+				<li>Right align: <kbd>.right</kbd></li>
+			</ul>
+			<div class="c-12 p-3">
+				<div class="left purple p-1" style="width:100px;">left</div>
+				<div class="center purple p-1" style="width:100px;">center</div>
+				<div class="right purple p-1" style="width:100px;">right</div>
+			</div>
+		</div>
+		<div class="c-6 c-l6 o-l1 p-1">
+			<h3 class="mb-1">Videos</h3>
+			<p>If you wrap video embeds with the <kbd>.video</kbd> class, you get a responsive scaling video.</p>
+			<div class="video mt-2">
+				<iframe width="560" height="315" srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font-size:48px;color:#fff;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/aqz-KE-bpKQ?autoplay=1><img src=https://img.youtube.com/vi/aqz-KE-bpKQ/hqdefault.jpg><span>▶</span></a>" frameborder="0" allow="autoplay; encrypted-media;" allowfullscreen></iframe>
+			</div>
+			<code class="p-1 white m-1">
+				&lt;div <b>class="video"</b>&gt;<br>
+				&nbsp;&nbsp;&nbsp;&lt;iframe src="https://youtube..."&gt;<br>
+				&lt;/div&gt;<br>
+			</code>
+		</div>
+	</div>
+
+	<div class="row pl-4 pr-4 mb-5">
+		<div class="c-s12">
+			<h2>Forms</h2>
+		</div>
+		<div class="c-6 p-2">
+			<p>The form elements are automatically styled, you don't need to add any class.</p>
+			<form>
+				<label for="text">Text input</label>
+				<input type="text" id="text" placeholder="Text input">
+
+				<label for="password">Password input</label>
+				<input type="password" id="password" placeholder="Password" value="asdf">
+
+				<label for="disabled">Disabled input</label>
+				<input type="text" disabled id="disabled" placeholder="Disabled">
+
+				<label>
+					<input type="checkbox" id="checkbox">
+					Checkbox
+				</label>
+
+				<label for="dropdown">Dropdown</label>
+				<select id="dropdown">
+					<option value="1">AAAA</option>
+					<option value="2">BBBB</option>
+					<option value="3">CCCC</option>
+				</select>
+
+				<textarea rows="5">Textarea textarea textarea</textarea>
+
+				<input type="submit" class="purple" onclick="return false" value="Submit">
+			</form>
+		</div>
+		<div class="c-6 p-2">
+			<h3 class="mb-1">Buttons</h3>
+			<button class="purple large m-1 s-2">Large</button>
+			<button class="purple m-1 s-2">Normal</button>
+			<button class="purple small m-1 s-2">Small</button>
+			<code class="p-1 white m-1">
+				&lt;button class="purple <b>large</b> s-2">Large&lt;/button&gt;<br>
+				&lt;button class="purple s-2">Normal&lt;/button&gt;<br>
+				&lt;button class="purple <b>small</b> s-2">Small&lt;/button&gt;<br>
+			</code>
+		</div>
+	</div>
+
+	<div class="row pl-4 pr-4 mb-5">
+		<div class="c-s12">
+			<h2>Other elements</h2>
+		</div>
+		<div class="c-6 p-2">
+			<p>Other elements are automatically styled, you don't need to add any class.</p>
+			<table style="width: 100%;">
+				<tr>
+					<th>Table heading</th>
+					<th>Table heading</th>
+				</tr>
+				<tr>
+					<td>AAAA</td>
+					<td>1234</td>
+				</tr>
+				<tr>
+					<td>BBBB</td>
+					<td>5678</td>
+				</tr>
+				<tr>
+					<td>CCCC</td>
+					<td>9999</td>
+				</tr>
+			</table>
+		</div>
+		<div class="c-6 p-2">
+			<p>This is a blockquote:</p>
+			<blockquote cite="http://example.com/facts">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+			</blockquote>
+			<p>This is a <mark>marked</mark> text, and a <kbd>kbd</kbd> text. <b>Bold</b>, <i>italic</i>, <u>underlined</u>, super<sup>script</sup>, sub<sub>script</sub>.</p>
+		</div>
+	</div>
+
+	<div class="row pl-4 pr-4">
+		<div class="c-12 pb-5">
+			<h1 id="custombuild" class="center mb-2">Create custom build</h1>
+
+			<p>What do you want to include in the build?</p>
+
+			<label> 
+				<input type="checkbox" name="build" onclick="build()" value="typography.min.css" checked>
+				Typography (Basic page style, font, table and other elements styling)
+			</label>
+
+			<label> 
+				<input type="checkbox" name="build" onclick="build()" value="grid.min.css" checked>
+				Grid system (responsive images included)
+			</label>
+
+			<label>
+				<input type="checkbox" name="build" onclick="build()" value="menu.min.css">
+				Menu
+			</label>
+
+			<label>
+				<input type="checkbox" name="build" onclick="build()" value="margin-padding.min.css">
+			 	Margins + paddings
+			 </label>
+
+			<label>
+				<input type="checkbox" name="build" onclick="build()" value="color-shadow.min.css">
+			 	Colors + shadows
+			</label>
+
+			<label> 
+				<input type="checkbox" name="build" onclick="build()" value="helper.min.css">
+				Helpers (align, reponsive video)
+			</label>
+
+			<label>
+				<input type="checkbox" name="build" onclick="build()" value="form.min.css">
+			 	Forms + buttons
+			</label>
+
+			<script>
+				document.addEventListener("DOMContentLoaded", function(event) { 
+					build();
+				});
+
+				function build(){
+					var build =  document.getElementsByName("build");
+					var buildresult = document.getElementById('buildresult');
+					buildresult.value = "";
+					var buildsize = document.getElementById('buildsize');
+					buildsize.innerHTML = 0;
+
+					var extrafolder = "";
+					if(window.location.hostname == "hlorand.github.io"){
+						extrafolder = "/loricss";
+					}
+
+					for(i=0; i<build.length; i++)
+					{
+						if ( build[i].checked ){
+							fetch(extrafolder + "/min/" + build[i].value)
+								.then(response => response.text())
+								.then((data) => {
+									buildresult.value += data;
+									buildsize.innerHTML = Math.round(buildresult.value.length / 1024 * 10) / 10;
+								})
+						}
+					}
+				}
+			
+			function saveTextAsFile(textToWrite, fileNameToSaveAs) {
+				var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'}); 
+				var downloadLink = document.createElement("a");
+				downloadLink.download = fileNameToSaveAs;
+				downloadLink.innerHTML = "Download File";
+				if (window.webkitURL != null){
+					downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+				}
+				else{
+					downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+					downloadLink.onclick = destroyClickedElement;
+					downloadLink.style.display = "none";
+					document.body.appendChild(downloadLink);
+				}
+
+				downloadLink.click();
+			}
+			</script>
+
+			<p><b>Build</b>: (<span id="buildsize">0</span> kb minified)</p>
+			<textarea id="buildresult" style="width:100%;" rows="10" onclick="this.focus();this.select()" readonly="readonly"></textarea>
+			<button class="orange s-3" onclick="saveTextAsFile(buildresult.value,'lori.custom.min.css')">Download build</button>
+		</div>
+	</div>
+
+<script>
+
+var elm = document.getElementsByTagName('code')
+var length = elm.length;
+for (var i = 0; i < length; i++) {
+  elm[i].className = elm[i].className + " lolight";
+}
+
+/*! lolight v1.3.0 - https://larsjung.de/lolight/ 
+removed the following keywords: and, is, with*/
+!function(e,t){"object"==typeof exports&&"object"==typeof module?module.exports=t():"function"==typeof define&&define.amd?define([],t):e.lolight=t()}(this,function(){function t(e){if("string"!=typeof e)throw new Error("tok: no string");for(var t=[],n=u.length,o=!1;e;)for(var r=0;r<n;r+=1){var i=u[r][1].exec(e);if(i&&0===i.index){var a=u[r][0];if("rex"!==a||!o){var l=i[0];a===s&&c.test(l)&&(a="key"),"spc"===a?0<=l.indexOf("\n")&&(o=!1):o=a===f||a===s,e=e.slice(l.length),t.push([a,l]);break}}}return t}function e(e,t){if("undefined"!=typeof document)t(document);else if(e)throw new Error("no doc")}function n(o){e(!0,function(n){var e=t(o.textContent);o.innerHTML="",e.forEach(function(e){var t=n.createElement("span");t.className="ll-"+e[0],t.textContent=e[1],o.appendChild(t)})})}function o(t){e(!0,function(e){[].forEach.call(e.querySelectorAll(t||".lolight"),function(e){n(e)})})}var r="_nam#2196f3}_num#ec407a}_str#43a047}_rex#ef6c00}_pct#666}_key#555;font-weight:bold}_com#aaa;font-style:italic}".replace(/_/g,".ll-").replace(/#/g,"{color:#"),c=/^(a(bstract|lias|rguments|rray|s(m|sert)?|uto)|b(ase|egin|ool(ean)?|reak|yte)|c(ase|atch|har|hecked|lass|lone|ompl|onst|ontinue)|de(bugger|cimal|clare|f(ault|er)?|init|l(egate|ete)?)|do|double|e(cho|ls?if|lse(if)?|nd|nsure|num|vent|x(cept|ec|p(licit|ort)|te(nds|nsion|rn)))|f(allthrough|alse|inal(ly)?|ixed|loat|or(each)?|riend|rom|unc(tion)?)|global|goto|guard|i(f|mp(lements|licit|ort)|n(it|clude(_once)?|line|out|stanceof|t(erface|ernal)?)?|)|l(ambda|et|ock|ong)|m(odule|utable)|NaN|n(amespace|ative|ext|ew|il|ot|ull)|o(bject|perator|r|ut|verride)|p(ackage|arams|rivate|rotected|rotocol|ublic)|r(aise|e(adonly|do|f|gister|peat|quire(_once)?|scue|strict|try|turn))|s(byte|ealed|elf|hort|igned|izeof|tatic|tring|truct|ubscript|uper|ynchronized|witch)|t(emplate|hen|his|hrows?|ransient|rue|ry|ype(alias|def|id|name|of))|u(n(checked|def(ined)?|ion|less|signed|til)|se|sing)|v(ar|irtual|oid|olatile)|w(char_t|hen|here|hile)|xor|yield)$/,i="com",s="nam",f="num",u=[[f,/#([0-9a-f]{6}|[0-9a-f]{3})\b/],[i,/(\/\/|#).*?(?=\n|$)/],[i,/\/\*[\s\S]*?\*\//],[i,/<!--[\s\S]*?-->/],["rex",/\/(\\\/|[^\n])*?\//],["str",/(['"`])(\\\1|[\s\S])*?\1/],[f,/[+-]?([0-9]*\.?[0-9]+|[0-9]+\.?[0-9]*)([eE][+-]?[0-9]+)?/],["pct",/[\\.,:;+\-*\/=<>()[\]{}|?!&@~]/],["spc",/\s+/],[s,/[\w$]+/],["unk",/./]];return e(!1,function(e){var t=e.querySelector("head"),n=e.createElement("style");n.textContent=r,t.insertBefore(n,t.firstChild),/^(i|c|loade)/.test(e.readyState)?o():e.addEventListener("DOMContentLoaded",function(){o()})}),o.tok=t,o.el=n,o});
+</script>
+</body>
+</html>
