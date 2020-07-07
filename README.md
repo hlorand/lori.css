@@ -3,7 +3,7 @@ Lori.css
 
 A small (2 kb gzipped) but powerful responsive CSS library.
 
-Documentation, examples and download: [https://hlorand.github.io/loricss/](https://hlorand.github.io/loricss/?)
+Documentation, examples and download: [https://hlorand.github.io/lori.css/](https://hlorand.github.io/lori.css/)
 
 Contains:
 
