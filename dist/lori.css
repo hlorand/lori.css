@@ -345,6 +345,7 @@ img.center{
 	padding: 10px;
 	text-align: center;
 }
+label.menutoggle{ margin: 0 !important; }
 #menutoggle {
 	display: none;
 }
