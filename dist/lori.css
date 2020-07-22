@@ -132,9 +132,6 @@ img{
 
 	/* small screen hide */
 	.c-sh{ display: none !important; }
-
-	/* responsive font size */
-	body{ font-size: small; }
 }
 
 @media only screen and (min-width: 640px) {
@@ -156,7 +153,7 @@ img{
 	.c-h{ display: none !important; }
 
 	/* responsive font size */
-	body{ font-size: medium; }
+	body{ font-size: large; }
 }
 
 @media only screen and (min-width: 640px) and (max-width: 1280px) {
@@ -209,7 +206,7 @@ img{
 	.c-lh { display: none  !important; }
 
 	/* responsive font size */
-	body{ font-size: large; }
+	body{ font-size: larger; }
 }
 
 /* responsive font size for even larger screens */
