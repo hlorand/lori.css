@@ -330,7 +330,6 @@ img.center{
 .menu li{
 	list-style: none;
 	text-align: center;
-	padding: 10px;
 }
 .menu li:hover{
 	filter: brightness(110%);
@@ -339,7 +338,6 @@ img.center{
 	width: 100%;
 	display: none;
 	cursor: pointer;
-	padding: 10px;
 	text-align: center;
 }
 label.menutoggle{ margin: 0 !important; }
