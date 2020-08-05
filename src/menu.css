@@ -8,8 +8,8 @@
 	list-style: none;
 	text-align: center;
 }
-.menu li:hover, .menu li.active{
-	filter: brightness(110%);
+.menu li.active{
+	filter: brightness(120%);
 }
 .menutoggle {
 	width: 100%;

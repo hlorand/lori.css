@@ -15,7 +15,7 @@ a{
 	text-decoration: none; 
 	color: #3498db; 
 }
-a:hover { 
+a:hover, input[type=submit]:hover { 
 	filter: brightness(120%);
 }
 
