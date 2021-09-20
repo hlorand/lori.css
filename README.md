@@ -5,6 +5,8 @@ A small (2 kb gzipped) but powerful responsive CSS library.
 
 Documentation, examples and download: [https://hlorand.github.io/lori.css/](https://hlorand.github.io/lori.css/)
 
+![](examples/example1.gif)
+
 Contains:
 
 - basic 12 column grid system, with 3 screen-size breakpoints (and offset and hider classes)
